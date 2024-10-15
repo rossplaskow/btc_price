@@ -120,9 +120,12 @@
 
                 riveInstance.resizeDrawingSurfaceToCanvas();
 
-                // Now update the Rive inputs with historical Bitcoin prices and current price digits
+                // Update the Rive inputs with historical Bitcoin prices and current price digits
                 updateHistoricalPrices();
                 updateBitcoinPriceDigits();
+
+                // Set interval to update the current Bitcoin price every 10 seconds
+                setInterval(updateBitcoinPriceDigits, 30000);
             }
         });
     </script>
